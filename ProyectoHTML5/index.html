@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Proyecto jQuery UI</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+	
+</head>
+<body>
+
+<h1>Ejemplos de jQuery UI</h1>
+
+<div class="ui-widget">
+	<p></p>
+</div>
+
+<h2>COMPONENTES:</h2>
+
+<!-- Accordion -->
+<h2 class="demoHeaders">Accordion</h2>
+<div><h2>Turismo</h2><div>
+<div id="accordion">
+	<h3>comida típica</h3>
+	<div>
+		<h3>Encebollado: el plato representativo de Ecuador en el 2015</h3>
+		Ecuador es un país que destaca por su infinidad de platos y deliciosa gastronomía, es así que actualmente apunta a convertirse en un importante destino culinario a escala mundial. En este año, el país llevará a cabo el Campeonato del Encebollado 2015, después de que este platillo fuera elegido como favorito en una encuesta realizada por el Ministerio de Turismo.
+		De acuerdo a la encuesta, cuyo objetivo era escoger al plato representativo de Ecuador en 2015, el encebollado se proclamó vencedor con el 55,76% del total de los votos, sobre el 44,24% que obtuvo su fuerte contendiente: el hornado.
+		La encuesta impulsada por el Mintur y apoyada por instituciones públicas de todo el país, fue activada a través de redes sociales utilizando el hashtag #EncebolladoVSHornado.
+		<br/><strong>Campeonato del Encebollado 2015</strong><br/>
+		Por segundo año consecutivo, Ecuador celebrará un festival gastronómico por todo lo alto. En 2014 el país fue testigo del Campeonato Mundial del Hornado.
+		El proceso iniciará en mayo con la etapa clasificatoria y concluirá en agosto durante la gran ceremonia final. Como parte de la primera fase, se mapearon 151 emprendimientos relacionados al encebollado en 21 provincias del país. De este número, se seleccionarán 3 representantes por provincia, de acuerdo a criterios de buen manejo de alimentos, identidad culinaria, entre otros. Este proceso de selección estuvo a cargo de representantes del Ministerio de Turismo y la Asociación de Chefs del Ecuador (ACE).
+		Posteriormente, en la primera etapa semifinal que se desarrollará de mayo a junio, se elegirá 1 de los 3 emprendimientos para representar a cada provincia; durante la segunda etapa semifinal (julio) se seleccionará a 1 ganador por coordinación zonal (una zonal comprende entre 3 y 4 provincias). Así, quedarán 7 encebollados finalistas.
+		Cabe mencionar que los representantes de los negocios que clasifiquen a las semifinales recibirán capacitación por parte de la ACE sobre seguridad alimentaria, técnicas de cocina, manejo de tiempo de elaboración, creatividad y servicio al cliente. Mientras que el Ministerio de Turismo brindará capacitación a los finalistas en temas de competencias laborales (hospitalidad, cocinero polivante, mesero, entre otros), e implementación de sistemas de gestión iniciales para sus establecimientos.
+		La gran final tendrá lugar durante la tercera semana de agosto en el Malecón Escénico ubicado en la playa El Murciélago de Manta. La seguridad alimentaria, el sabor de los ingredientes, la identidad culinaria y la creatividad serán los factores que se tomarán en cuenta al momento de elegir al mejor encebollado del Ecuador.
+	</div>
+	<h3>fauna y flora</h3>
+	<div>
+		<h3>Maravíllese con el florecimiento de los Guayacanes</h3>
+		Entre el 21 y 26 de enero, Mangahurco ubicada en la provincia de Loja, será escenario de un de los acontecimientos más maravillosos que nos brinda la naturaleza: El florecimiento de los Guayacanes.
+		Este evento natural es único en el Ecuador y se da una sola vez al año, a partir de la primera lluvia de invierno; se prevé que durará 6 días, por lo que ha creado mucha expectativa en los turistas nacionales y extranjeros.
+		El maravilloso y colorido evento natural tendrá invitados especiales como el Ministro de Turismo Freddy Ehlers y representantes de varios medios de comunicación del país. Las autoridades de Zapotillo han preparado un calendario de actividades para compartir con  todos los turistas.
+		Caminata al bosque de Guayacanes, con un recorrido de 5km que terminará en el balneario El Inca, almuerzo en la localidad de Mangahurco, donde los platos tradicionales como el seco de chivo también llamado “chivo al hueco”, será una de las delicias que  ofertará a los visitantes, además del seco de gallina criolla acompañado de yuca, zapallo y ensalada; y, un delicioso refresco de tamarindo, fruta de la región.
+		Otras de las actividades programadas es la inauguración del concurso de pintura a cargo de la Fundación Naturaleza y Cultura y una cabalgata en el bosque de Mangahurco.
+		<br/><strong>Un bosque vestido de sol</strong><br/>
+		Cuando los Guayacanes visten de un hermoso color amarillo el bosque lojano de Mangahurco, convirtiéndose en una selva, las primeras lluvias acompañan los cantos de las aves endémicas del sur ecuatoriano, es entonces el tiempo en que los pobladores del sector bailan, cantan y hacen feria con todas sus cosechas y artesanías que han acumulado en todo el año; muchos turistas vienen de fuera y dentro del país, para presenciar el acontecimiento más enigmático de Ecuador.</div>
+	
+</div>
+
+
+
+
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+
+$( "#accordion" ).accordion();
+
+
+
+var availableTags = [
+	"ActionScript",
+	"AppleScript",
+	"Asp",
+	"BASIC",
+	"C",
+	"C++",
+	"Clojure",
+	"COBOL",
+	"ColdFusion",
+	"Erlang",
+	"Fortran",
+	"Groovy",
+	"Haskell",
+	"Java",
+	"JavaScript",
+	"Lisp",
+	"Perl",
+	"PHP",
+	"Python",
+	"Ruby",
+	"Scala",
+	"Scheme"
+];
+$( "#autocomplete" ).autocomplete({
+	source: availableTags
+});
+
+
+
+$( "#button" ).button();
+$( "#radioset" ).buttonset();
+
+
+
+$( "#tabs" ).tabs();
+
+
+
+$( "#dialog" ).dialog({
+	autoOpen: false,
+	width: 400,
+	buttons: [
+		{
+			text: "Ok",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		},
+		{
+			text: "Cancel",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	]
+});
+
+// Link to open the dialog
+$( "#dialog-link" ).click(function( event ) {
+	$( "#dialog" ).dialog( "open" );
+	event.preventDefault();
+});
+
+
+
+$( "#datepicker" ).datepicker({
+	inline: true
+});
+
+
+
+$( "#slider" ).slider({
+	range: true,
+	values: [ 17, 67 ]
+});
+
+
+
+$( "#progressbar" ).progressbar({
+	value: 25
+});
+
+
+
+$( "#spinner" ).spinner();
+
+
+
+$( "#menu" ).menu();
+
+
+
+$( "#tooltip" ).tooltip();
+
+
+
+$( "#selectmenu" ).selectmenu();
+
+
+// Hover states on the static widgets
+$( "#dialog-link, #icons li" ).hover(
+	function() {
+		$( this ).addClass( "ui-state-hover" );
+	},
+	function() {
+		$( this ).removeClass( "ui-state-hover" );
+	}
+);
+</script>
+</body>
+</html>
